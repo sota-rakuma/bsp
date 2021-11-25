@@ -6,7 +6,7 @@
 /*   By: srakuma <srakuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 21:58:42 by srakuma           #+#    #+#             */
-/*   Updated: 2021/11/25 17:39:36 by srakuma          ###   ########.fr       */
+/*   Updated: 2021/11/25 17:42:31 by srakuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ bool	is_point_inside(Point const max, Point const median, \
 	if ((point.get_x() < median.get_x()))
 	{
 		return ((Fixed::min(val[0], val[2]) < point.get_y())
-			&& (point.get_y() < Fixed::max(val[0], val[2])));
+					&& (point.get_y() < Fixed::max(val[0], val[2])));
 	}
-		return ((Fixed::min(val[0], val[1]) < point.get_y())
-			&& (point.get_y() < Fixed::max(val[0], val[1])));
+	return ((Fixed::min(val[0], val[1]) < point.get_y())
+				&& (point.get_y() < Fixed::max(val[0], val[1])));
 }
 
 bool	bsp( Point const a, Point const b, Point const c, Point const point)
